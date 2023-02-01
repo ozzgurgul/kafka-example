@@ -18,7 +18,7 @@ public class SpringbootKafkaApplication {
     CommandLineRunner commandLineRunner(KafkaTemplate<String, String> kafkaTemplate) {
         return args -> {
             for (int i = 0; i <100 ; i++) {
-                kafkaTemplate.send("kafkaexp", "hello kafka :)" + i);
+                kafkaTemplate.send("kafkaexp", "first message with kafka !" + i);
             }
         };
     }
